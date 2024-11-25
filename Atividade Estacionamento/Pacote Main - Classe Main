@@ -1,0 +1,22 @@
+package br.com.luciana.main;
+
+import br.com.estacionamento.impl.Carro;
+import br.com.estacionamento.impl.Moto;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		Carro objCarro = new Carro("JHG2345", "prata"); //valores informados pelo usuário
+		objCarro.exibirInformacoes();                   //chamando os métodos
+		objCarro.calcularTotalCarro(2, false);
+		
+		System.out.println("======================================");
+		
+	    Moto objMoto = new Moto ("JKL4578", "preta");   //valores informados pelo usuário
+	    objMoto.exibirInformacoes();                    //chamando os métodos
+	    objMoto.calcularTotalMoto(4, false);
+
+	}
+
+}
