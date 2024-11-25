@@ -1,0 +1,64 @@
+package br.com.luciana.dispositivosRoboticos;
+
+public class DispositivoRobotico {
+
+	//Atributos
+	private String nomeDispositivo;
+	private String locomocaoDispositivo;
+	private String energiaDispositivo;
+	private String dadosDispositivo;
+	
+	//Construtor
+	public DispositivoRobotico(String nomeDispositivo, String locomocaoDispositivo, String energiaDispositivo, String dadosDispositivo) {
+		this.nomeDispositivo = nomeDispositivo;
+		this.locomocaoDispositivo = locomocaoDispositivo;
+		this.energiaDispositivo = energiaDispositivo;
+		this.dadosDispositivo = dadosDispositivo;
+	}
+
+	//Getters and Setters
+	public String getNomeDispositivo() {
+		return nomeDispositivo;
+	}
+
+	public void setNomeDispositivo(String nomeDispositivo) {
+		this.nomeDispositivo = nomeDispositivo;
+	}
+
+	public String getLocomocaoDispositivo() {
+		return locomocaoDispositivo;
+	}
+
+	public void setLocomocaoDispositivo(String locomocaoDispositivo) {
+		this.locomocaoDispositivo = locomocaoDispositivo;
+	}
+
+	public String getEnergiaDispositivo() {
+		return energiaDispositivo;
+	}
+
+	public void setEnergiaDispositivo(String energiaDispositivo) {
+		this.energiaDispositivo = energiaDispositivo;
+	}
+
+	public String getDadosDispositivo() {
+		return dadosDispositivo;
+	}
+
+	public void setDadosDispositivo(String dadosDispositivo) {
+		this.dadosDispositivo = dadosDispositivo;
+	}
+	
+	//Métodos
+	public void exibirInformacoes() {
+		System.out.println("Dispositivo: " + nomeDispositivo);
+		System.out.println("Capacidade de locomoção: " + locomocaoDispositivo);
+		System.out.println("Energia disponível: " + energiaDispositivo);
+		System.out.println("Capacidade de coleta de dados: " + dadosDispositivo);
+	}
+	
+	public void calcularEficiencia() {
+		System.out.println("Calculando eficiência do(a) " + nomeDispositivo);
+	}
+	
+}
