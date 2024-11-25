@@ -1,0 +1,52 @@
+package br.com.luciana.restaurante;
+
+public class Prato { //Hereança: "Prato" é a classe principal, pois possui características genéricas que serão comuns a todas as classes filhas
+
+	//Atributos do objeto pai e declaração das variaveis
+    private String nomePrato;
+    private String ingredientesPrato;
+    private double precoPrato;
+	
+    //Construtor: responsável por passar para as variáveis já declaradas os valores que forem inseridos pelo usuário na main
+    public Prato(String nomePrato, String ingredientesPrato, double precoPrato) {
+		this.nomePrato = nomePrato;                      // O "this" faz referência às variáveis já criadas lá em cima
+		this.ingredientesPrato = ingredientesPrato;
+		this.precoPrato = precoPrato;
+	}
+
+	//Getters and Setters: demonstram o Encapsulamento, pois quando os atributos estão privados em uma classe e quer acessar esses atributos por outra classe, os getters and setters permitem acessá-los. 
+    public String getNomePrato() {
+		return nomePrato;
+	}
+
+	public void setNomePrato(String nomePrato) {
+		this.nomePrato = nomePrato;
+	}
+
+	public String getIngredientesPrato() {
+		return ingredientesPrato;
+	}
+
+	public void setIngredientesPrato(String ingredientesPrato) {
+		this.ingredientesPrato = ingredientesPrato;
+	}
+
+	public double getPrecoPrato() {
+		return precoPrato;
+	}
+
+	public void setPrecoPrato(double precoPrato) {
+		this.precoPrato = precoPrato;
+	}
+    
+	//Métodos: são as ações que o objeto realiza
+	public void calcularPreco() {
+		System.out.println("Calculando o preço do " + nomePrato);
+	}
+    
+	public void exibirInformacoes() {
+		System.out.println("Prato: " + nomePrato);
+		System.out.println("Ingredientes do prato: " + ingredientesPrato);
+	}
+
+}
