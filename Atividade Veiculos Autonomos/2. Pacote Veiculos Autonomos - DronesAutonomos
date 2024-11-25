@@ -1,0 +1,65 @@
+package br.com.luciana.veiculosAutonomos;
+
+public class DronesAutonomos extends VeiculosAutonomos {
+
+	//Atributos
+	private String modeloDrone;
+	private String alturaMaxima;
+	private String tipoCamera;
+	
+	//Construtor
+	public DronesAutonomos(String nomeVeiculo, String autonomiaVeiculo, int passageirosVeiculo, String modeloDrone, String alturaMaxima, String tipoCamera) {
+		super(nomeVeiculo, autonomiaVeiculo, passageirosVeiculo);
+		this.modeloDrone = modeloDrone;
+		this.alturaMaxima = alturaMaxima;
+		this.tipoCamera = tipoCamera;
+	}
+
+	//Getters and Setters
+	public String getModeloDrone() {
+		return modeloDrone;
+	}
+
+	public void setModeloDrone(String modeloDrone) {
+		this.modeloDrone = modeloDrone;
+	}
+
+	public String getAlturaMaxima() {
+		return alturaMaxima;
+	}
+
+	public void setAlturaMaxima(String alturaMaxima) {
+		this.alturaMaxima = alturaMaxima;
+	}
+
+	public String getTipoCamera() {
+		return tipoCamera;
+	}
+
+	public void setTipoCamera(String tipoCamera) {
+		this.tipoCamera = tipoCamera;
+	}
+
+	//Métodos
+	public void ligarCamera() {
+		System.out.println("Ligando a câmera do Drone");
+	}
+	
+	public void voarDrone() {
+		System.out.println("Drone voando");
+	}
+	
+	@Override
+	public void exibirInformacoes() {
+		super.exibirInformacoes();
+		System.out.println("Modelo Drone: " + modeloDrone);
+		System.out.println("Altuma máxima de voo: " + alturaMaxima);
+		System.out.println("Tipo de câmera: " + tipoCamera);
+	}
+
+	@Override
+	public void calcularEconomia() {
+		super.calcularEconomia();
+	}
+	
+}
