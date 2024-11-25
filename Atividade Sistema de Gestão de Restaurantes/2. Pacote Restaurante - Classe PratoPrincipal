@@ -1,0 +1,57 @@
+package br.com.luciana.restaurante;
+
+public class PratoPrincipal extends Prato{ //Herança: o "extends" permite que a classe filha herde atributos e métodos da classe pai
+	
+	//Atributos: caracteríticas que só PratoPrincipal possui e que serão registradas como variáveis
+		private String tipoCarne;
+		private String acompanhamentos;
+		
+	//Construtor: serve para inicializar as as variaveis da classe, passando o que for inserido pelo usuário na main para dentro delas
+		public PratoPrincipal(String nomePrato, String ingredientesPrato, double precoPrato, String tipoCarne,String acompanhamentos) {
+			super(nomePrato, ingredientesPrato, precoPrato); // Herança: o "super" indica quais variáveis vieram da classe pai
+			this.tipoCarne = tipoCarne;                      // O "this" faz referência às variáveis já criadas lá em cima 
+			this.acompanhamentos = acompanhamentos;
+		}
+    
+	//Getters and Setters: demonstram o Encapsulamento, pois como os atributos da classe são privados os Getters e Setters permitem acessar esses atributos privados da classe e alterá-los
+		public String getTipoCarne() {
+			return tipoCarne;
+		}
+
+		public void setTipoCarne(String tipoCarne) {
+			this.tipoCarne = tipoCarne;
+		}
+
+		public String getAcompanhamentos() {
+			return acompanhamentos;
+		}
+
+		public void setAcompanhamentos(String acompanhamentos) {
+			this.acompanhamentos = acompanhamentos;
+		}
+	
+	//Métodos: ações que Prato principal realiza
+		public void molho() {
+			System.out.println("O seu prato tem a opção de adicionar um molho como acompanhamento");
+		}
+		
+		public void pontoDaCarne() {
+			System.out.println("Por padrão o ponto do " + tipoCarne + " será bem passado");
+		}
+	
+	//Polimorfismo: o Override permite fazer uma sobrescrita em um método da classe principal, dando a esse método um novo formato
+		
+		@Override
+		public void calcularPreco() {
+			super.calcularPreco();
+			System.out.println("O preço é: R$ 35,00");
+		}
+
+		@Override
+		public void exibirInformacoes() {
+			super.exibirInformacoes();
+			System.out.println("Tipo de carne: " + tipoCarne);
+			System.out.println("Acompanhamentos: " + acompanhamentos);
+		}
+
+}
