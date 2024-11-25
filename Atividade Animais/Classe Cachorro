@@ -1,0 +1,34 @@
+package br.com.luciana.animal;
+
+public class Cachorro extends Animal {
+
+	//Atributos
+	private String fucinho;
+	
+	//Construtor
+	public Cachorro(String nomeAnimal, int idadeAnimal, String tipoAnimal, String fucinho) {
+		super(nomeAnimal, idadeAnimal, tipoAnimal);
+		this.fucinho = fucinho;
+	}
+	
+    //Getters and Setters
+	public String getFucinho() {
+		return fucinho;
+	}
+
+	public void setFucinho(String fucinho) {
+		this.fucinho = fucinho;
+	}
+    
+	//Métodos
+	public void farejar() {
+		System.out.println("Cachorro farejando");
+	}
+
+	@Override
+	public void fazerSom() {
+		super.fazerSom();
+		System.out.println("Au Au");
+	}
+	
+}
