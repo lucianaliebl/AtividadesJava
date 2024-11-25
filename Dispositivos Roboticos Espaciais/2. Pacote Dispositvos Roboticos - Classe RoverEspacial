@@ -1,0 +1,54 @@
+package br.com.luciana.dispositivosRoboticos;
+
+public class RoverEspacial extends DispositivoRobotico {
+
+	//Atributos
+	private String temperaturaMax;
+	private String capacidadeAmostras;
+	
+	//Construtor
+	public RoverEspacial(String nomeDispositivo, String locomocaoDispositivo, String energiaDispositivo, String dadosDispositivo, String temperaturaMax, String capacidadeAmostras) {
+		super(nomeDispositivo, locomocaoDispositivo, energiaDispositivo, dadosDispositivo);
+		this.temperaturaMax = temperaturaMax;
+		this.capacidadeAmostras = capacidadeAmostras;
+	}
+
+	//Getters and Setters
+	public String getTemperaturaMax() {
+		return temperaturaMax;
+	}
+
+	public void setTemperaturaMax(String temperaturaMax) {
+		this.temperaturaMax = temperaturaMax;
+	}
+
+	public String getCapacidadeAmostras() {
+		return capacidadeAmostras;
+	}
+
+	public void setCapacidadeAmostras(String capacidadeAmostras) {
+		this.capacidadeAmostras = capacidadeAmostras;
+	}
+	
+	//Métodos
+	public void medirTemperatura() {
+		System.out.println("Rover medindo a temperatura");
+	}
+	
+	public void coletarAmostras() {
+		System.out.println("Rover coletando amostras");
+	}
+
+	@Override
+	public void exibirInformacoes() {
+		super.exibirInformacoes();
+		System.out.println("Resistância a Temperatura: " + temperaturaMax);
+		System.out.println("Capacidade de coleta de amostras: " + capacidadeAmostras);
+	}
+
+	@Override
+	public void calcularEficiencia() {
+		super.calcularEficiencia();
+	}
+	
+}
