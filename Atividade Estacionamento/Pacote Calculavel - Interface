@@ -1,0 +1,11 @@
+package br.com.luciana.calculavel;
+
+//Interface
+public interface Calculavel {
+	
+	//Sobrescrita de Métodos na interface 
+	public void calcularTotalCarro(double tempoCarro, boolean lavagem);
+	
+	public void calcularTotalMoto(double tempoMoto,  boolean troaOleo);
+
+}
