@@ -1,0 +1,48 @@
+package br.com.luciana.produtos;
+
+public class Produto {
+	
+	//Atributos
+	private String nomeProduto;
+	private double preçoProduto;
+	private String descriçaoProduto;
+	
+	//Construtor
+	public Produto(String nomeProduto, double preçoProduto, String descriçaoProduto) {
+		this.nomeProduto = nomeProduto;
+		this.preçoProduto = preçoProduto;
+		this.descriçaoProduto = descriçaoProduto;
+	}
+
+	//Getters and Setters	
+	public String getNomeProduto() {
+		return nomeProduto;
+	}
+
+	public void setNomeProduto(String nomeProduto) {
+		this.nomeProduto = nomeProduto;
+	}
+
+	public double getPreçoProduto() {
+		return preçoProduto;
+	}
+
+	public void setPreçoProduto(double preçoProduto) {
+		this.preçoProduto = preçoProduto;
+	}
+
+	public String getDescriçaoProduto() {
+		return descriçaoProduto;
+	}
+
+	public void setDescriçaoProduto(String descriçaoProduto) {
+		this.descriçaoProduto = descriçaoProduto;
+	}
+	
+	//Métodos
+	public void exibirInformacoe() {
+		System.out.println("Preço: R$ " + preçoProduto);
+		System.out.println("Descrição: " + descriçaoProduto);
+	}
+
+}
