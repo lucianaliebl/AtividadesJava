@@ -1,0 +1,9 @@
+package br.com.luciana.calculavel;
+
+//Interface 
+public interface Calculavel {
+	
+	//Assinatura do método da interface: a classe que chamar a interface tem que usar essa assinatura 
+	double calcularIMC();
+
+}
