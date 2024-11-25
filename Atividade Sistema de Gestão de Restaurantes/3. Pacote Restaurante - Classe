@@ -1,0 +1,56 @@
+package br.com.luciana.restaurante;
+
+public class Sobremesa extends Prato{ //Herança: o "extends" permite que a classe filha herde atributos e métodos da classe pai 
+
+	//Atributos: caracteríticas que só Sobremesa possui e que serão registradas como variáveis
+	private String tipoDoce;
+	private String tamanhoPorcao;
+	
+	//Construtor: serve para inicializar as as variaveis da classe, passando o que for inserido pelo usuário na main para dentro delas
+	public Sobremesa(String nomePrato, String ingredientesPrato, double precoPrato, String tipoDoce,String tamanhoPorcao) {
+		super(nomePrato, ingredientesPrato, precoPrato); // Herança: o "super" indica quais variáveis vieram da classe pai
+		this.tipoDoce = tipoDoce;                        // O "this" faz referência aa variáveis já criadas lá em cima 
+		this.tamanhoPorcao = tamanhoPorcao;
+	}
+
+	//Getters and Setters: demonstram o Encapsulamento, pois como os atributos da classe são privados os Getters e Setters permitem acessar esses atributos privados da classe e alterá-los
+	public String getTipoDoce() {
+		return tipoDoce;
+	}
+
+	public void setTipoDoce(String tipoDoce) {
+		this.tipoDoce = tipoDoce;
+	}
+
+	public String getTamanhoPorcao() {
+		return tamanhoPorcao;
+	}
+
+	public void setTamanhoPorcao(String tamanhoPorcao) {
+		this.tamanhoPorcao = tamanhoPorcao;
+	}
+	
+	//Métodos: ações que Sobremesa realiza
+	public void sorvete() {
+		System.out.println("Sua sobremesa tem a opção de adicionar uma bola de sorvete como acompanhamento");
+	}
+	
+	public void aniversario() {
+		System.out.println("Se for seu aniversário, você tem direito a uma sobremesa como cortesia");
+	}
+
+	//Polimorfismo: o Override permite fazer uma sobrescrita em um método da classe principal, dando a esse método um novo formato
+	@Override
+	public void calcularPreco() {
+		super.calcularPreco();
+		System.out.println("O preço é: R$ 25,00");
+	}
+
+	@Override
+	public void exibirInformacoes() {
+		super.exibirInformacoes();     
+		System.out.println("Tipo de doce: " + tipoDoce);
+		System.out.println("Tamanho da porção: " + tamanhoPorcao);
+	}
+
+}
