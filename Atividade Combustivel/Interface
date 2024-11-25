@@ -1,0 +1,9 @@
+package br.com.luciana.agradecimento;
+
+public interface MetodoAgradecimento {
+	
+	public void calcularCombustivel(double alcool, double gasolina);
+	
+	public void calculaCombustivel(double alcool, double gasolina, String agradecimento);
+	
+}
