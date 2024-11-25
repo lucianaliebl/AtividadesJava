@@ -1,0 +1,61 @@
+package br.com.luciana.animal;
+
+	public class Animal {
+	      
+		//Atributos comuns a todos os animais
+		private String nomeAnimal;
+		private int idadeAnimal;
+		private String tipoAnimal;
+		
+		public Animal(String nomeAnimal, int idadeAnimal, String tipoAnimal) {
+			super();
+			this.nomeAnimal = nomeAnimal;
+			this.idadeAnimal = idadeAnimal;
+			this.tipoAnimal = tipoAnimal;
+		}
+		
+		//Getters and Setters
+		public String getNomeAnimal() {
+			return nomeAnimal;
+		}
+
+		public void setNomeAnimal(String nomeAnimal) {
+			this.nomeAnimal = nomeAnimal;
+		}
+
+		public int getIdadeAnimal() {
+			return idadeAnimal;
+		}
+
+		public void setIdadeAnimal(int idadeAnimal) {
+			this.idadeAnimal = idadeAnimal;
+		}
+
+		public String getTipoAnimal() {
+			return tipoAnimal;
+		}
+
+		public void setTipoAnimal(String tipoAnimal) {
+			this.tipoAnimal = tipoAnimal;
+		}
+		
+		//Métodos Comuns a todos os animais 
+		public void cadastrar() {
+			System.out.println("Animal cadastrado com sucesso");
+		}
+		
+		public void consultar() {
+			System.out.println("Consulta do animal agendada");
+		}
+		
+		public void fazerSom() {
+			System.out.print("Animal fazendo som ");
+		}
+		
+		public void imprimirInformacoes() {
+			System.out.println("Nome: " + nomeAnimal);
+			System.out.println("Idade: " + idadeAnimal);
+			System.out.println("Peso: " + tipoAnimal);
+		}
+
+}
