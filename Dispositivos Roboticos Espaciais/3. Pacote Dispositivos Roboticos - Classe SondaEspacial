@@ -1,0 +1,55 @@
+package br.com.luciana.dispositivosRoboticos;
+
+public class SondaEspacial extends DispositivoRobotico {
+	
+	//Atributos
+	private String velocidadeTransmissao;
+	private String autonomiaVoo;
+	
+	//Construtor
+	public SondaEspacial(String nomeDispositivo, String locomocaoDispositivo, String energiaDispositivo, String dadosDispositivo, String velocidadeTransmissao, String autonomiaVoo) {
+		super(nomeDispositivo, locomocaoDispositivo, energiaDispositivo, dadosDispositivo);
+		this.velocidadeTransmissao = velocidadeTransmissao;
+		this.autonomiaVoo = autonomiaVoo;
+	}
+
+	//Getters and Setters
+	public String getVelocidadeTransmissao() {
+		return velocidadeTransmissao;
+	}
+
+	public void setVelocidadeTransmissao(String velocidadeTransmissao) {
+		this.velocidadeTransmissao = velocidadeTransmissao;
+	}
+
+	public String getAutonomiaVoo() {
+		return autonomiaVoo;
+	}
+
+	public void setAutonomiaVoo(String autonomiaVoo) {
+		this.autonomiaVoo = autonomiaVoo;
+	}
+	
+	//Métodos
+	public void transmitirDados() {
+		System.out.println("Sonda transmitindo dados à base");
+	}
+	
+	public void receberDados() {
+		System.out.println("Sonda recebendo dados da base");
+	}
+
+	@Override
+	public void exibirInformacoes() {
+		super.exibirInformacoes();
+		System.out.println("Velocidade de transmissão de dados: " + velocidadeTransmissao);
+		System.out.println("Autonomia de voo: " + autonomiaVoo);
+	}
+
+	@Override
+	public void calcularEficiencia() {
+		// TODO Auto-generated method stub
+		super.calcularEficiencia();
+	}
+
+}
