@@ -1,0 +1,62 @@
+package br.com.luciana.produtos;
+
+public class Eletrônico extends Produto {
+
+	//Atributos
+	private String nomeEletronico;
+	private String marcaEletronico;
+	private String voltagemEletronico;
+	
+	//Contrutor	
+	public Eletrônico(String nomeProduto, double preçoProduto, String descriçaoProduto, String nomeEletronico, String marcaEletronico, String voltagemEletronico) {
+		super(nomeProduto, preçoProduto, descriçaoProduto);
+		this.nomeEletronico = nomeEletronico;
+		this.marcaEletronico = marcaEletronico;
+		this.voltagemEletronico = voltagemEletronico;
+	}
+	
+	//Getters and Setters
+	public String getNomeEletronico() {
+		return nomeEletronico;
+	}
+
+	public void setNomeEletronico(String nomeEletronico) {
+		this.nomeEletronico = nomeEletronico;
+	}
+
+	public String getMarcaEletronico() {
+		return marcaEletronico;
+	}
+
+	public void setMarcaEletronico(String marcaEletronico) {
+		this.marcaEletronico = marcaEletronico;
+	}
+
+	public String getVoltagemEletronico() {
+		return voltagemEletronico;
+	}
+
+	public void setVoltagemEletronico(String voltagemEletronico) {
+		this.voltagemEletronico = voltagemEletronico;
+	}
+
+	//Métodos
+	public void ligarEletronico() {
+		System.out.println("Ligando o " + nomeEletronico);
+	}
+	
+	public void desligarEletronico() {
+		System.out.println("Desligando o " + nomeEletronico);
+	}
+
+	//@Override
+	public void exibirInformacoe() {
+		System.out.println("Produto: " + getNomeProduto());
+		System.out.println("Eletrônico: " + nomeEletronico);
+		super.exibirInformacoe();
+		System.out.println("Eletrônico: " + nomeEletronico);
+		System.out.println("Marca: " + marcaEletronico);
+		System.out.println("Voltagem: " + voltagemEletronico);
+	}
+	
+}
