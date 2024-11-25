@@ -1,0 +1,33 @@
+package br.com.luciana.Main;
+
+import br.com.luciana.dispositivosRoboticos.RoverEspacial;
+import br.com.luciana.dispositivosRoboticos.SondaEspacial;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		RoverEspacial objRover = new RoverEspacial("Rover Espacial", "1.000.000 km", "900 watts-horas", "12 Mb", "50°C", "10 tubos");
+		
+		objRover.setTemperaturaMax("-125°C a 50°C");
+		objRover.setCapacidadeAmostras("40 tubos");
+		objRover.exibirInformacoes();
+		objRover.calcularEficiencia();
+		objRover.medirTemperatura();
+		objRover.coletarAmostras();
+		
+		System.out.println();
+		System.out.println("====================");
+		System.out.println();
+		
+		SondaEspacial objSonda = new SondaEspacial("Sonda Espacial", "1.000.000.000 km", "388 watts-hora", "24 Mb", "20 Mb/s", "30.000 km/h");
+		
+		objSonda.setDadosDispositivo("700 Mb");
+		objSonda.setVelocidadeTransmissao("600 Mb/s");
+		objSonda.exibirInformacoes();
+		objSonda.calcularEficiencia();
+		objSonda.transmitirDados();
+		objSonda.receberDados();
+	}
+
+}
