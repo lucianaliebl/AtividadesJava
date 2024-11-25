@@ -1,0 +1,15 @@
+package br.com.luciana.main;
+
+import br.com.luciana.combustivel.impl.Combustivel;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		Combustivel objCombustivel = new Combustivel();
+		
+		objCombustivel.calculaCombustivel(3.42, 5.78, "Obrigada por abastecer");
+
+	}
+
+}
