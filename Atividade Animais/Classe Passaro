@@ -1,0 +1,53 @@
+package br.com.luciana.animal;
+
+public class Passaro extends Animal{
+	
+		//Atributos
+		private String pena;
+		private String bico;
+		
+		//Construtor
+		public Passaro(String nomeAnimal, int idadeAnimal, String tipoAnimal, String pena, String bico) {
+			super(nomeAnimal, idadeAnimal, tipoAnimal);
+			this.pena = pena;
+			this.bico = bico;
+		}
+		
+		//Getters and Setters
+		public String getPena() {
+			return pena;
+		}
+
+		public void setPena(String pena) {
+			this.pena = pena;
+		}
+
+		public String getBico() {
+			return bico;
+		}
+
+		public void setBico(String bico) {
+			this.bico = bico;
+		}
+	
+        //Métodos
+		public void voar() {
+			System.out.println ("O passaro está voando");
+		}
+
+		@Override
+		public void fazerSom() {
+			super.fazerSom();
+			System.out.println("Piu piu");
+		}
+
+		@Override
+		public void imprimirInformacoes() {
+			// TODO Auto-generated method stub
+			super.imprimirInformacoes();
+			System.out.println("Pena: " + pena);
+			System.out.println("Bico: " + bico);
+			
+		}
+		
+}
