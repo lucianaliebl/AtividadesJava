@@ -1,0 +1,55 @@
+package br.com.luciana.veiculosAutonomos;
+
+public class CarrosAutonomos extends VeiculosAutonomos{
+
+	//Atributos
+	private String modeloCarro;
+	private String tipoCombustivel;
+	
+	//Construtor 
+	public CarrosAutonomos(String nomeVeiculo, String autonomiaVeiculo, int passageirosVeiculo, String modeloCarro, String tipoCombustivel) {
+		super(nomeVeiculo, autonomiaVeiculo, passageirosVeiculo);
+		this.modeloCarro = modeloCarro;
+		this.tipoCombustivel = tipoCombustivel;
+	}
+
+	//Getters and Setters
+	public String getModeloCarro() {
+		return modeloCarro;
+	}
+
+	public void setModeloCarro(String modeloCarro) {
+		this.modeloCarro = modeloCarro;
+	}
+
+	public String getTipoCombustivel() {
+		return tipoCombustivel;
+	}
+
+	public void setTipoCombustivel(String tipoCombustivel) {
+		this.tipoCombustivel = tipoCombustivel;
+	}
+	
+	//Métodos
+	public void réCarro() {
+		System.out.println("Carro dando ré");
+	}
+	
+	public void abastecerCarro() {
+		System.out.println("Abastecendo o carro com " + tipoCombustivel);
+	}
+
+	@Override
+	public void exibirInformacoes() {
+		super.exibirInformacoes();
+		System.out.println("Modelo Carro Autônomo: " + modeloCarro);
+		System.out.println("Tipo de combustível: " + tipoCombustivel);
+	}
+		
+
+	@Override
+	public void calcularEconomia() {
+		super.calcularEconomia();
+	}
+		
+}
