@@ -1,2 +1,2 @@
 # AtividadesJava
-Atividades desenvolvidas na matéria de Programação Orientada a Objetos
+Atividades e trabalhos desenvolvidos na matéria de Programação Orientada a Objetos
