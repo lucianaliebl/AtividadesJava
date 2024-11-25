@@ -1,0 +1,37 @@
+package br.com.luciana.combustivel.impl;
+
+import br.com.luciana.agradecimento.MetodoAgradecimento;
+
+public class Combustivel implements MetodoAgradecimento {
+
+
+	@Override
+	public void calcularCombustivel(double alcool, double gasolina) {
+       
+		double resultado = alcool/gasolina;
+		
+		if (resultado < 0.70) {
+			System.out.println("A melhor opção é abastecer com etanol");
+		} else {
+			System.out.println("A melho opção é abastecer com gasolina");
+		}
+		
+	}
+
+	@Override
+	public void calculaCombustivel(double alcool, double gasolina, String agradecimento) {
+		
+		double resultado = alcool/gasolina;
+		
+		if (resultado < 0.70) {
+			System.out.println("A melhor opção é abastecer com etanol");
+		} else {
+			System.out.println("A melho opção é abastecer com gasolina");
+		}
+		
+		System.out.println(agradecimento);
+		
+	}
+
+	
+}
