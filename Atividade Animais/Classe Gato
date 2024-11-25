@@ -1,0 +1,41 @@
+package br.com.luciana.animal;
+
+	public class Gato extends Animal {
+
+		//Atributos
+		private String corPelo;
+;
+		
+		//Construtor 
+		public Gato(String nomeAnimal, int idadeAnimal, String tipoAnimal, String corPelo) {
+			super(nomeAnimal, idadeAnimal, tipoAnimal);
+			this.corPelo = corPelo;
+		}
+		
+		//Getters and Setters
+		public String getCorPelo() {
+			return corPelo;
+		}
+		public void setCorPelo(String corPelo) {
+			this.corPelo = corPelo;
+		}
+
+		//Métodos
+		public void pegarRato() {
+			System.out.println("O gato pegou um rato");
+		}
+		
+		@Override
+		public void fazerSom() {
+			super.fazerSom();
+			System.out.println("Miau");
+		}
+
+		@Override
+		public void imprimirInformacoes() {
+			// TODO Auto-generated method stub
+			super.imprimirInformacoes();
+			System.out.println("Pelo: " + corPelo);
+		}
+		
+}
