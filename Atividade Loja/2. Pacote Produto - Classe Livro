@@ -1,0 +1,61 @@
+package br.com.luciana.produtos;
+
+public class Livro extends Produto{
+
+	//Atributos
+	private String nomeLivro;
+	private String autorLivro;
+	private String generoLivro;
+	
+	//Construtor
+	public Livro(String nomeProduto, double preçoProduto, String descriçaoProduto, String nomeLivro, String autorLivro, String generoLivro) {
+		super(nomeProduto, preçoProduto, descriçaoProduto);
+		this.nomeLivro = nomeLivro;
+		this.autorLivro = autorLivro;
+		this.generoLivro = generoLivro;
+	}
+
+  //Getters and Setters
+	public String getNomeLivro() {
+		return nomeLivro;
+	}
+
+	public void setNomeLivro(String nomeLivro) {
+		this.nomeLivro = nomeLivro;
+	}
+
+	public String getAutorLivro() {
+		return autorLivro;
+	}
+
+	public void setAutorLivro(String autorLivro) {
+		this.autorLivro = autorLivro;
+	}
+
+	public String getGeneroLivro() {
+		return generoLivro;
+	}
+
+	public void setGeneroLivro(String generoLivro) {
+		this.generoLivro = generoLivro;
+	}
+	
+	//Métodos
+	public void abrirLivro() {
+		System.out.println("Abrindo o livro " + nomeLivro);
+	}
+
+	public void lerLivro() {
+		System.out.println("Lendo o livro " + nomeLivro);
+	}
+
+	//@Override
+	public void exibirInformacoe() {
+		System.out.println("Produto: " + getNomeProduto());
+		System.out.println("Livro: " + nomeLivro);
+		super.exibirInformacoe();
+		System.out.println("Autor do Livro: " + autorLivro);
+		System.out.println("Gênero do Livro: " + generoLivro);
+	}
+	
+}
