@@ -1,0 +1,53 @@
+package br.com.luciana.veiculosAutonomos;
+
+public class VeiculosAutonomos {
+	
+	//Atributos
+	private String nomeVeiculo;
+	private String autonomiaVeiculo;
+	private int passageirosVeiculo;
+	
+	//Construtor
+	public VeiculosAutonomos(String nomeVeiculo, String autonomiaVeiculo, int passageirosVeiculo) {
+		this.nomeVeiculo = nomeVeiculo;
+		this.autonomiaVeiculo = autonomiaVeiculo;
+		this.passageirosVeiculo = passageirosVeiculo;
+	}
+
+	//Getters and Setters
+	public String getNomeVeiculo() {
+		return nomeVeiculo;
+	}
+
+	public void setNomeVeiculo(String nomeVeiculo) {
+		this.nomeVeiculo = nomeVeiculo;
+	}
+
+	public String getAutonomiaVeiculo() {
+		return autonomiaVeiculo;
+	}
+
+	public void setAutonomiaVeiculo(String autonomiaVeiculo) {
+		this.autonomiaVeiculo = autonomiaVeiculo;
+	}
+
+	public int getPassageirosVeiculo() {
+		return passageirosVeiculo;
+	}
+
+	public void setPassageirosVeiculo(int passageirosVeiculo) {
+		this.passageirosVeiculo = passageirosVeiculo;
+	}
+
+  //Métodos
+	public void exibirInformacoes() {
+		System.out.println("Veiculo: " + nomeVeiculo);
+		System.out.println("Autonomia: " + autonomiaVeiculo);
+		System.out.println("Passageiros: " + passageirosVeiculo);
+	}
+	
+	public void calcularEconomia() {
+		System.out.println("Calculando a economia do " + nomeVeiculo);
+	}
+	
+}
