@@ -1,0 +1,35 @@
+package br.com.luciana.main;
+
+import br.com.luciana.restaurante.PratoPrincipal; //importando a classe PratoPrinciapal que é a forma 
+import br.com.luciana.restaurante.Sobremesa; //importando a classe Sobremesa que é a forma 
+
+public class MainRestaurante {
+
+	public static void main(String[] args) { 
+		
+		// Instanciar o objeto: tirar o objeto da forma
+		PratoPrincipal objPratoPrincipal = new PratoPrincipal("Hamburguer", "pão, queijo, alface, tomate, hamburguer", 40, "hamburguer", "batata frita");//dentro dos parênteses são inseridos os conteúdos de cada variável
+		//Prato principal é a forma e objPratoPrincipal é o objeto que estou criando 
+		
+		//Implementando os métodos que o objeto criado irá realizar:
+		objPratoPrincipal.exibirInformacoes();
+		objPratoPrincipal.calcularPreco();
+		objPratoPrincipal.molho();
+		objPratoPrincipal.pontoDaCarne();
+
+		System.out.println();
+		System.out.println("=============");
+		System.out.println();
+		
+		Sobremesa objSobremesa = new Sobremesa("Brownie", "farinha, açucar, chocolate e manteiga", 30, "doce com chocolate", "pequena"); //dentro dos parênteses são inseridos o conteúdo de cada variável
+		//Sobremesa é a forma e objSobremesa é o objeto que estou criando 
+		
+		//Implementando os métodos que o objeto criado irá realizar:
+		objSobremesa.exibirInformacoes();
+		objSobremesa.calcularPreco();
+		objSobremesa.sorvete();
+		objSobremesa.aniversario();
+		
+	}
+
+}
