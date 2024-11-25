@@ -1,0 +1,51 @@
+package br.com.luciana.main;
+
+import br.com.luciana.IMC.impl.Pessoa; //importando a classe pessoa já com a interface implementada
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		// Instanciar o objeto: tirar o objeto da forma
+		Pessoa objPessoa = new Pessoa ("Marina", 15, 50.0, 1.70); //inicializando as variáveis
+		objPessoa.exibirInformações(); //chamando os métodos da classe Pessoa
+		objPessoa.calcularIMC();
+		objPessoa.classificarIMC();
+		
+	    System.out.println("========================================");
+		
+		Pessoa objPessoa1 = new Pessoa ("Luciana", 24, 61.0, 1.71);
+		objPessoa1.exibirInformações();
+		objPessoa1.calcularIMC();
+		objPessoa1.classificarIMC();
+		
+		System.out.println("========================================");
+		
+		Pessoa objPessoa2 = new Pessoa ("Joao", 37, 75.0, 1.73);
+		objPessoa2.exibirInformações();
+		objPessoa2.calcularIMC();
+		objPessoa2.classificarIMC();
+		
+		System.out.println("========================================");
+		
+		Pessoa objPessoa3 = new Pessoa ("Paulo", 55, 100.0, 1.78);
+		objPessoa3.exibirInformações();
+		objPessoa3.calcularIMC();
+		objPessoa3.classificarIMC();
+		
+		System.out.println("========================================");
+		
+		Pessoa objPessoa4 = new Pessoa ("Bernardo", 26, 120.0, 1.83);
+		objPessoa4.exibirInformações();
+		objPessoa4.calcularIMC();
+		objPessoa4.classificarIMC();
+		
+		System.out.println("========================================");
+		
+		Pessoa objPessoa5 = new Pessoa ("Maria", 60, 140.0, 1.67);
+		objPessoa5.exibirInformações();
+		objPessoa5.calcularIMC();
+		objPessoa5.classificarIMC();
+	}
+
+}
