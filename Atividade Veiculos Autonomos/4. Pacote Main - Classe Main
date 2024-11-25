@@ -1,0 +1,32 @@
+package br.com.luciana.main;
+
+import br.com.luciana.veiculosAutonomos.CarrosAutonomos;
+import br.com.luciana.veiculosAutonomos.DronesAutonomos;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		DronesAutonomos objDrone = new DronesAutonomos("Drone", "30 minutos de voo", 0, "DJI Avata", "40m", "RGB");
+		
+		objDrone.setAlturaMaxima("50 m");
+		objDrone.exibirInformacoes();
+		objDrone.calcularEconomia();
+		objDrone.voarDrone();
+		objDrone.ligarCamera();
+		
+		System.out.println();
+		System.out.println("====================");
+		System.out.println();
+		
+		CarrosAutonomos objCarro = new CarrosAutonomos("Carro autônomo", "100 km", 5, "Volvo XC90", "Gasolina");
+		
+		objCarro.setTipoCombustivel("Álcool");
+		objCarro.exibirInformacoes();
+		objCarro.calcularEconomia();
+		objCarro.abastecerCarro();
+		objCarro.réCarro();
+		
+	}
+
+}
