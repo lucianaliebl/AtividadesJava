@@ -1,0 +1,95 @@
+package br.com.luciana.IMC.impl;
+
+import br.com.luciana.calculavel.Calculavel;
+
+public class Pessoa implements Calculavel{ //implementa o método que está na interface Calculavel 
+	
+	//Atributos: caracteríticas únicas da classe pessoa
+	private String nome;
+	private int idade;
+	private double peso;
+	private double altura;
+	
+	//Construtor: responsável por passar para as variáveis já declaradas os valores que forem inseridos pelo usuário na main
+	public Pessoa(String nome, int idade, double peso, double altura) {
+		super();
+		this.nome = nome;
+		this.idade = idade;
+		this.peso = peso;
+		this.altura = altura;
+	}
+
+	//Getters and Setters: demonstram o Encapsulamento, pois quando os atributos estão privados em uma classe e quer acessar esses atributos por outra classe, os getters and setters permitem acessá-los. 
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public int getIdade() {
+		return idade;
+	}
+
+	public void setIdade(int idade) {
+		this.idade = idade;
+	}
+
+	public double getPeso() {
+		return peso;
+	}
+
+	public void setPeso(double peso) {
+		this.peso = peso;
+	}
+
+	public double getAltura() {
+		return altura;
+	}
+
+	public void setAltura(double altura) {
+		this.altura = altura;
+	}
+
+	// Implementação da Interface e Polimorfismo: traz a assinatura/método que está na interface
+	@Override
+	public double calcularIMC() {
+		
+		double imc = peso/ (altura * altura);
+		
+		return imc;
+		
+	} 
+	
+	//Método da classe Pessoa: é uma ação que a classe realiza
+	public void exibirInformações() {
+		System.out.println("Nome: " + nome);
+		System.out.println("Idade: " + idade);
+		System.out.println("Peso: " + peso);
+		System.out.println("Altura: " + altura);
+	}
+	
+	//Método da classe Pessoa: é uma ação que a classe realiza
+	public void classificarIMC() {
+		
+		double imc = calcularIMC();
+		
+		System.out.println("O IMC de(a) " + nome + " é " + imc);
+		
+		if (imc < 18.5) {
+			System.out.println(nome + " está abaixo do peso");
+		} else if (imc >= 18.5 && imc <= 24.9) {
+			System.out.println(nome + " está com o peso normal");
+		} else if (imc >= 25.0 && imc <= 29.9) {
+			System.out.println(nome + " está com sobrepeso");
+		} else if (imc >= 30.0 && imc <= 34.9) {
+			System.out.println(nome + " está com obesidade grau 1");
+		} else if (imc >= 35.0 && imc <= 39.9) {
+			System.out.println(nome + " está com obesidade grau 2");
+		} else {
+			System.out.println(nome + " está com obesidade grau 3");
+		}
+	}
+
+}
