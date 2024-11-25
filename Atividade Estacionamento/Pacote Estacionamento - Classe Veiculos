@@ -1,0 +1,75 @@
+
+package br.com.estacionamento.impl;
+
+import br.com.luciana.calculavel.Calculavel;
+
+//Herança - classe pai
+public class Veiculos implements Calculavel{ //implementa a interface na classe pai
+	
+	//Atributos que todo veiculo possui 
+	private String placaVeiculo;
+	private String corVeiculo;
+	
+	//Construtor 
+	public Veiculos(String placaVeiculo, String corVeiculo) {
+		super();
+		this.placaVeiculo = placaVeiculo;
+		this.corVeiculo = corVeiculo;
+	}
+
+	//Getters and Setters - Encapsulamento 
+	public String getPlacaVeiculo() {
+		return placaVeiculo;
+	}
+
+	public void setPlacaVeiculo(String placaVeiculo) {
+		this.placaVeiculo = placaVeiculo;
+	}
+
+	public String getCorVeiculo() {
+		return corVeiculo;
+	}
+
+	public void setCorVeiculo(String corVeiculo) {
+		this.corVeiculo = corVeiculo;
+	}
+
+	//Método para exibir informações do veiculo
+	public void exibirInformacoes() {
+		System.out.println("Placa: " + placaVeiculo);
+		System.out.println("Cor Veiculo: " + corVeiculo);
+	}
+
+	//Polimorfismo 
+	@Override
+	public void calcularTotalCarro(double tempoCarro, boolean lavagem) {
+		
+		double resultadoCarro = tempoCarro * 5; 
+		
+		if (lavagem == true) {
+			double totalCarro = resultadoCarro + 50;
+		    System.out.println("Tempo de permanencia: " + tempoCarro + " hora(s)");
+			System.out.println("Total a pagar do carro R$: " + totalCarro);
+		} else {
+			System.out.println("Tempo de permanencia: " + tempoCarro + " hora(s)");
+			System.out.println("Total a pagar do carro R$: " + resultadoCarro);
+		}
+	}
+
+	//Polimorfismo
+	@Override
+	public void calcularTotalMoto(double tempoMoto, boolean trocaOleo) {
+	
+		double resultadoMoto = tempoMoto * 2;
+		
+		if(trocaOleo == true) {
+		   double totalMoto = resultadoMoto + 30;
+		   System.out.println("Tempo de permanencia: " + tempoMoto + " hora(s)");
+		   System.out.println("Total a pagar da moto R$: " + totalMoto);
+		} else {
+		   System.out.println("Tempo de permanencia: " + tempoMoto + " hora(s)");
+		   System.out.println("Total a pagar da moto R$: " + resultadoMoto);
+	    }		
+	}	
+
+}
