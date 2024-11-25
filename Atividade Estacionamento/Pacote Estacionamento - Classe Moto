@@ -1,0 +1,12 @@
+// Luciana Liebl de Freitas  - Matricuca UC23200568
+
+package br.com.estacionamento.impl;
+
+public class Moto extends Veiculos{ // Herança classe filha
+
+	//Construtor para passar os valores inseridos pelo usuário na main pera as variáveis
+	public Moto(String placaVeiculo, String corVeiculo) {
+		super(placaVeiculo, corVeiculo);
+	}
+	
+}
